@@ -1,22 +1,16 @@
 import Styled from 'styled-components';
 
-const FormContainer = Styled.div `
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    position: relative;
-    float: right;
-    top: 150px;
-    right: 5%;
-`
-
 const StyledForm = Styled.form `
     display: flex;
     flex-direction: column;
-    border-radius: 30px;
-    width: 30vw;
+    justify-content: center;
+    width: 20vw;
     margin: 10px auto;
     align-items: center;
+    position: relative;
+    float: right;
+    right: 10%;
+    top: 70px;
 `
 
 const Title = Styled.h2 `
@@ -28,21 +22,30 @@ const Title = Styled.h2 `
 const StyledInput = Styled.input `
  color: #fff;
  width: 20vw;
+ background-color: transparent;
  border: none;
  border-bottom: 1px solid gray;
+ margin-top: 10%;
+`
+
+const StyledTextArea = Styled.textarea `
+ color: #fff;
+ width: 20vw;
  background-color: transparent;
+ border: none;
+ border-bottom: 1px solid gray;
  margin-top: 10%;
 `
 
 const StyledButton = Styled.button `
-    background-color: rgb(0, 29, 61);
+    background-color: rgb(7, 23, 41);
     border: none;
     color: #fff;
     padding: 5px;
-    width: 80px;
+    width: 100px;
     border-radius: 10px;
     font-weight: 900;
-    margin-top: 5%;
+    margin-top: 10%;
     &:hover{
         opacity: 0.8;
     }
@@ -53,16 +56,17 @@ color: #fff;
 `
 
 const Aside = Styled.div `
-width: 60vw;
-height: 100vh;
-background-color: #fff;
-position: absolute;
+ width: 60vw;
+ height: 100vh;
+ background-color: #fff;
+ position: absolute;
 `
 
 const Image = Styled.img `
-    width: 80%;
+    width: 60%;
     position: absolute;
-    top: 20%;
+    left: 10%;
+    top: 10%;
 `
 
 export {
@@ -70,8 +74,8 @@ export {
     Title,
     StyledInput,
     StyledButton,
+    StyledTextArea,
     Error,
-    FormContainer,
     Aside,
     Image,
     }
