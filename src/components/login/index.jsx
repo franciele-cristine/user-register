@@ -13,9 +13,11 @@ import {
     Image,
 } from './style';
 import LoginImg from '../../images/login.svg';
+import {useHistory} from 'react-router-dom';
 
  
 const Login = () =>{
+    const history = useHistory();
     const schema = yup.object().shape({
         user: yup.string().required("Campo obrigatório"),
         password: yup.string().required("Campo obrigatório").min(6, "Senha deve tern no mínimo 6 digitos")
@@ -25,13 +27,15 @@ const Login = () =>{
     })
     const tryLogin = (data) =>{
         api.post('/authenticate', {...data})
-            .then(res => localStorage.setItem('authToken', res.data.auth_token))
+            .then((res) => (
+                localStorage.setItem('authToken', res.data.auth_token)),
+                history.push('/users')
+                )
             .catch(err => console.log(err))
     }
 
     return(
         <>
-            
             <Aside>
                 <Image src={LoginImg} alt="login image" />
             </Aside>
@@ -45,8 +49,6 @@ const Login = () =>{
                     <StyledButton type="submit">Login</StyledButton>
                 </StyledForm>
             </FormContainer>
-           
-            
         </>
     )
 }

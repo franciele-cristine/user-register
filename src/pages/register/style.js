@@ -5,12 +5,12 @@ const StyledForm = Styled.form `
     flex-direction: column;
     justify-content: center;
     width: 20vw;
-    margin: 10px auto;
+    margin: auto;
     align-items: center;
     position: relative;
     float: right;
     right: 10%;
-    top: 70px;
+    margin-top: -30px;
 `
 
 const Title = Styled.h2 `

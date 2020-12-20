@@ -13,8 +13,7 @@ const FormContainer = Styled.div `
 const StyledForm = Styled.form `
     display: flex;
     flex-direction: column;
-    border-radius: 30px;
-    width: 30vw;
+    width: 25vw;
     margin: 10px auto;
     align-items: center;
 `
@@ -55,6 +54,7 @@ color: #fff;
 const Aside = Styled.div `
 width: 60vw;
 height: 100vh;
+margin-top: 0;
 background-color: #fff;
 position: absolute;
 `

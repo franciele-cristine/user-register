@@ -1,12 +1,7 @@
 import axios from 'axios';
 
-const token = localStorage.getItem('authToken');
-
 const api = axios.create({
-    baseURL: 'https://ka-users-api.herokuapp.com',
-    headers: {
-        Authorization: token
-    }
+    baseURL: 'https://ka-users-api.herokuapp.com'
 })
 
 export default api
