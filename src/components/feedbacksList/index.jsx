@@ -2,12 +2,15 @@ import api from '../../services/api';
 import {useState, useEffect} from 'react';
 import {useParams} from 'react-router-dom';
 import Pages from '../pagination';
+import NewFeedback from '../NewFeedback';
 import {
     Table,
     TableRow,
     TableCell,
     Button,
-    TableHead
+    TableHead,
+    Title,
+    Header,
 } from './style';
 
 const FeedbackList = () =>{
@@ -16,6 +19,7 @@ const FeedbackList = () =>{
     const [feedbacks, setFeedbacks] = useState([]);
     const [lastIndex, setLastIndex] = useState(0)
     const [nextPage, setNextPage] = useState(7)
+    const [isOpen, setOpen] = useState(false)
 
     useEffect(() =>{
         api.get(`users/${params.id}/feedbacks`,{
@@ -30,6 +34,12 @@ const FeedbackList = () =>{
 
     return(
         <>
+        {isOpen && <NewFeedback setOpen={setOpen}/>}
+        <Header>
+        <Title>Feedbacks</Title>
+        <Button onClick={() => setOpen(true)}>Novo Feedback</Button>
+        </Header>
+        
         <Pages
         items={feedbacks}
         setLastIndex={setLastIndex}

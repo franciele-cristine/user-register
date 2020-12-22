@@ -1,5 +1,16 @@
 import styled from 'styled-components';
 
+export const Title = styled.h1 `
+
+`
+export const Header = styled.div ` 
+    width: 90vw;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+`
 export const Table = styled.table `
     margin: 2% auto;
     width: 90vw;
@@ -33,9 +44,11 @@ export const TableHead = styled.th `
     padding: 2%;
 `
 export const Button = styled.button `
-    background-color: transparent;
+    background-color: rgb(0, 29, 61);
+    height: 50px;
     border: none;
-    color: rgb(0, 29, 61);
+    padding: 1%;
+    color: #fff;
     font-weight: 900;
     &:hover{
         color: #00a2ff;

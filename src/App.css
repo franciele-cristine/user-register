@@ -5,4 +5,6 @@ body{
   background-color: rgb(7, 75, 148);
   color: #fff;
   overflow: hidden;
+  z-index: -1;
+  position: absolute;
 }
