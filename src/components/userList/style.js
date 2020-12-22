@@ -15,7 +15,7 @@ export const TableRow = styled.tr `
 `
 export const TableCell = styled.td `
     display: flex;
-    width: 20vw;
+    width: 18vw;
     align-items: center;
     justify-content: center;
     background-color: rgba(255, 255, 255, 0.5);
